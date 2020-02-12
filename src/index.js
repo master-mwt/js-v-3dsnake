@@ -5,13 +5,13 @@ import Arena from './model/Arena';
 import Tag from './model/Tag';
 import Snake from './model/Snake';
 
-//renderer
+//renderer init
 var canvasRef = document.getElementById("main");
 var renderer = new THREE.WebGLRenderer({antialias: true, canvas: canvasRef});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-//scene, camera and controls (for OrbitControls)
+//scene, camera and controls (for OrbitControls) init
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, 1, 10000);
 var controls = new OrbitControls(camera, renderer.domElement);
@@ -26,8 +26,8 @@ var tag = new Tag(scene, 0xff00ff, arena);
 var snake = new Snake(scene, 0x00ff00, 5, arena, tag);
 
 //camera and orbit controls setup
-//snake.snakeHead.add(camera);
-//camera.lookAt(snake.snakeHead.position);
+    //snake.snakeHead.add(camera);
+    //camera.lookAt(snake.snakeHead.position);
 camera.position.set(0,80,80);
 controls.update();
 
@@ -80,6 +80,7 @@ function kbcontrols(event) {
     }
 }
 
+//hud init function
 function hud() {
     document.getElementById("score").innerHTML = snake.score;
     document.getElementById("speed").innerHTML = snake.speed;

@@ -34,10 +34,6 @@ export default function Snake(scene, color, speed, arena, tag) {
     this.snakeMoveVectorX = new THREE.Vector3(this.arena.cellDim,0,0);
     this.snakeMoveVectorZ = new THREE.Vector3(0,0,this.arena.cellDim);
 
-    // this.snakePos = null;
-    // this.onSelfCollision = function() {};
-    // this.onTagCollision = function() {};
-
     this.geometry = new THREE.BoxBufferGeometry(this.arena.cellDim, this.arena.cellDim, this.arena.cellDim);
     this.material = new THREE.MeshBasicMaterial({color: this.color});
     
