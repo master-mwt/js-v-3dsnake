@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>3dsnake</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <div class="container-fluid" id="container">
+        <div class="p-3 mt-4 ml-4" id="overlay">
+            <div class="row">
+                <p class="text-primary m-0 mr-3">SCORE</p>
+                <span class="text-white" id="score"></span>
+            </div>
+            <div class="row">
+                <p class="text-primary m-0 mr-3">SPEED</p>
+                <span class="text-white" id="speed"></span>
+            </div>
+            <div class="row mb-3">
+                <p class="text-primary m-0 mr-3">PAUSE</p>
+                <span class="text-white" id="pause"></span>
+            </div>
+            <div class="row mb-2">
+                <button class="btn btn-outline-warning mr-2" id="speed_decr_button" onclick="snake.speedDecr()">speed_decr</button>
+                <button class="btn btn-outline-warning" id="speed_incr_button" onclick="snake.speedIncr()">speed_incr</button>
+            </div>
+            <div class="row mb-3">
+                <button class="btn btn-outline-danger mr-2" id="status_button" onclick="snake.changeStatus()">pause</button>
+                <button class="btn btn-outline-danger" id="reset_button" onclick="snake.snakeDestroy();">reset</button>
+            </div>
+            <div class="row">
+                <h5 class="mr-2"><span class="badge badge-dark">wasd</span></h5>
+                <p class="text-white m-0 p-0">directions</p>
+            </div>
+            <div class="row">
+                <h5 class="mr-2"><span class="badge badge-dark">p</span></h5>
+                <p class="text-white m-0 p-0">pause/resume</p>
+            </div>
+            <div class="row">
+                <h5 class="mr-2"><span class="badge badge-dark">r</span></h5>
+                <p class="text-white m-0 p-0">reset</p>
+            </div>
+            <div class="row">
+                <h5 class="mr-2"><span class="badge badge-dark">+ -</span></h5>
+                <p class="text-white m-0 p-0">speed controls</p>
+            </div>
+        </div>
+        <canvas id="main"></canvas>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

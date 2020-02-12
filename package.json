@@ -1,0 +1,19 @@
+{
+  "name": "3dsnake",
+  "version": "1.0.0",
+  "description": "simple webgl-based 3d snake game",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GLP-3.0",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "lodash": "^4.17.15",
+    "three": "^0.113.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^4.0.0-beta.2"
+  }
+}
