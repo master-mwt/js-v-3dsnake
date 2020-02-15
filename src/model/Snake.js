@@ -29,6 +29,7 @@ export default function Snake(scene, color, speed, arena, tag) {
 
     this.lock = false;
     this.prevSnakeDir = null;
+    this.prevsnakeAxis = null;
     this.prevblock_prevpos = null;
 
     this.snakeMoveVectorX = new THREE.Vector3(this.arena.cellDim,0,0);
@@ -205,15 +206,11 @@ Snake.prototype = {
         if(this.pauseGuard) {
             this.prevSnakeDir = this.snakeDir;
             this.snakeDir = '';
-            this.snakeAxis = {
-                right: true,
-                left: true,
-                forward: true,
-                backward: true,
-            };
+            this.prevsnakeAxis = this.snakeAxis;
             document.getElementById('status_button').innerHTML = 'resume';
         } else {
             this.snakeDir = this.prevSnakeDir;
+            this.snakeAxis = this.prevsnakeAxis;
             document.getElementById('status_button').innerHTML = 'pause';
         }
     },
