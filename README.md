@@ -3,6 +3,5 @@
 ## simple webgl-based 3d snake game
 
 #### todo
-* restore snake axis (post-resume action)
 * (?) walls impl
 * (?) ai, maybe using rl
