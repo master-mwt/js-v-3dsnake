@@ -68,10 +68,16 @@ function kbcontrols(event) {
             case 80: //p
                 snake.changeStatus();
                 break;
-            case 187: //+
+            case 187: //+ chrome
                 snake.speedIncr();
                 break;
-            case 189: //-
+            case 171: //+ firefox
+                snake.speedIncr();
+                break;
+            case 189: //- chrome
+                snake.speedDecr();
+                break;
+            case 173: //- firefox
                 snake.speedDecr();
                 break;
             case 82: //r
@@ -89,20 +95,21 @@ function hud() {
     } else {
         document.getElementById("pause").innerHTML = 'disabled';
     }
-    //expose
-    document.getElementById("speed_decr_button").addEventListener('click', function() {
-        snake.speedDecr();
-    });
-    document.getElementById("speed_incr_button").addEventListener('click', function() {
-        snake.speedIncr();
-    });
-    document.getElementById("status_button").addEventListener('click', function() {
-        snake.changeStatus();
-    });
-    document.getElementById("reset_button").addEventListener('click', function() {
-        snake.snakeDestroy();
-    });
 }
+
+//expose
+document.getElementById("speed_decr_button").addEventListener('click', function() {
+    snake.speedDecr();
+});
+document.getElementById("speed_incr_button").addEventListener('click', function() {
+    snake.speedIncr();
+});
+document.getElementById("status_button").addEventListener('click', function() {
+    snake.changeStatus();
+});
+document.getElementById("reset_button").addEventListener('click', function() {
+    snake.snakeDestroy();
+});
 
 //render loop
 var animate = function () {

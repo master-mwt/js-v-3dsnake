@@ -2,6 +2,9 @@
 
 ## simple webgl-based 3d snake game
 
+<img src="./imgs/ref.png">
+
 #### todo
 * (?) walls impl
 * (?) ai, maybe using rl
+
