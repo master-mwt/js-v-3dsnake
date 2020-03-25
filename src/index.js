@@ -89,10 +89,20 @@ function hud() {
     } else {
         document.getElementById("pause").innerHTML = 'disabled';
     }
+    //expose
+    document.getElementById("speed_decr_button").addEventListener('click', function() {
+        snake.speedDecr();
+    });
+    document.getElementById("speed_incr_button").addEventListener('click', function() {
+        snake.speedIncr();
+    });
+    document.getElementById("status_button").addEventListener('click', function() {
+        snake.changeStatus();
+    });
+    document.getElementById("reset_button").addEventListener('click', function() {
+        snake.snakeDestroy();
+    });
 }
-
-//expose
-window.snake = snake;
 
 //render loop
 var animate = function () {
