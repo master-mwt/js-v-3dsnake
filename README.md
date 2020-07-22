@@ -5,6 +5,6 @@
 <img src="./imgs/ref.png">
 
 #### todo
-* (?) walls impl
-* (?) ai, maybe using rl
 
+- (?) walls impl
+- (?) ai, maybe using rl
